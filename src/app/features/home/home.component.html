@@ -1,0 +1,10 @@
+<section class="hero">
+  <h1>Creative experiments</h1>
+  <p>A collection of web concepts exploring design, language, and interaction.</p>
+</section>
+
+<div class="grid">
+  @for (site of sites; track site.slug) {
+    <app-site-card [site]="site" />
+  }
+</div>

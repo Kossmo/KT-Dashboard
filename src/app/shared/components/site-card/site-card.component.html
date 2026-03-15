@@ -1,0 +1,35 @@
+<article class="card" [style.--accent]="site().color">
+  <div class="preview">
+    @if (site().status === 'coming-soon') {
+      <div class="placeholder">
+        <span class="label">Coming soon</span>
+      </div>
+    } @else {
+      <iframe
+        [lazySrc]="site().url"
+        [title]="site().name + ' preview'"
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+    }
+  </div>
+
+  <footer class="meta">
+    <div class="meta-top">
+      <h2 class="name">{{ site().name }}</h2>
+      @if (site().status === 'coming-soon') {
+        <span class="badge">soon</span>
+      }
+    </div>
+    <p class="description">{{ site().description }}</p>
+    <div class="tags">
+      @for (tag of site().tags; track tag) {
+        <span class="tag">{{ tag }}</span>
+      }
+    </div>
+    @if (site().status === 'live') {
+      <a class="link" [href]="site().url" target="_blank" rel="noopener noreferrer">
+        Visit ↗
+      </a>
+    }
+  </footer>
+</article>
