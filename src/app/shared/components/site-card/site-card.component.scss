@@ -1,5 +1,10 @@
 :host {
   display: block;
+
+  @media (max-width: 480px) {
+    max-width: 90%;
+    margin-inline: auto;
+  }
 }
 
 .card {
