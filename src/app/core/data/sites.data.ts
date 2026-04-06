@@ -17,7 +17,7 @@ export const SITES: Site[] = [
     description: 'Real-time earthquake visualization with sonification.',
     tags: ['data', 'map', 'audio', 'real-time'],
     color: '#FF5032',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     name: 'Echo',
