@@ -9,6 +9,7 @@ export const SITES: Site[] = [
     tags: ['etymology', 'language', 'interactive'],
     color: '#2563EB',
     status: 'live',
+    screenshot: 'screenshots/dissect.jpg',
   },
   {
     name: 'Seismic',
@@ -18,6 +19,7 @@ export const SITES: Site[] = [
     tags: ['data', 'map', 'audio', 'real-time'],
     color: '#FF5032',
     status: 'live',
+    screenshot: 'screenshots/seismic.jpg',
   },
   {
     name: 'Echo',
@@ -26,6 +28,7 @@ export const SITES: Site[] = [
     description: 'Visualize your voice as geometric shapes in real-time.',
     tags: ['voice', 'generative', 'audio', 'canvas'],
     color: '#8B5CF6',
-    status: 'coming-soon',
+    status: 'live',
+    screenshot: 'screenshots/echo.jpg',
   },
 ];

@@ -8,6 +8,8 @@
 }
 
 .card {
+  display: block;
+  text-decoration: none;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -17,10 +19,18 @@
     box-shadow 0.25s ease,
     transform 0.25s ease;
 
-  &:hover {
-    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-    box-shadow: 0 0 28px color-mix(in srgb, var(--accent) 12%, transparent);
-    transform: translateY(-3px);
+  &:not(.is-coming-soon) {
+    cursor: pointer;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+      box-shadow: 0 0 28px color-mix(in srgb, var(--accent) 12%, transparent);
+      transform: translateY(-3px);
+    }
+  }
+
+  &.is-coming-soon {
+    cursor: default;
   }
 }
 
@@ -30,18 +40,26 @@
   overflow: hidden;
   background: var(--bg-surface);
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    opacity: 0.65;
+    transition: opacity 0.3s ease;
+
+    .card:hover & {
+      opacity: 1;
+    }
+  }
+
   iframe {
     width: 100%;
     height: 100%;
     border: none;
     opacity: 0.65;
-    transition: opacity 0.3s ease;
     pointer-events: none;
-
-    .card:hover & {
-      opacity: 1;
-      pointer-events: auto;
-    }
   }
 }
 
@@ -121,19 +139,4 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 0.125rem 0.5rem;
-}
-
-.link {
-  margin-top: 0.375rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--accent);
-  text-decoration: none;
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
-  align-self: flex-start;
-
-  &:hover {
-    opacity: 1;
-  }
 }

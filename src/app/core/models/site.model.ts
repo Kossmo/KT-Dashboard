@@ -6,4 +6,5 @@ export interface Site {
   tags: string[];
   color: string;
   status: 'live' | 'coming-soon';
+  screenshot?: string;
 }

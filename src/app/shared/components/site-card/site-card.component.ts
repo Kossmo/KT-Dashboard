@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 
 import { Site } from '../../../core/models/site.model';
 import { LazyIframeDirective } from '../../directives/lazy-iframe.directive';
@@ -12,4 +12,9 @@ import { LazyIframeDirective } from '../../directives/lazy-iframe.directive';
 })
 export class SiteCardComponent {
   site = input.required<Site>();
+  screenshotFailed = signal(false);
+
+  onScreenshotError(): void {
+    this.screenshotFailed.set(true);
+  }
 }

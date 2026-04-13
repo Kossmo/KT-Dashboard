@@ -1,9 +1,18 @@
-<article class="card" [style.--accent]="site().color">
+<a
+  class="card"
+  [style.--accent]="site().color"
+  [href]="site().status === 'live' ? site().url : null"
+  [attr.target]="site().status === 'live' ? '_blank' : null"
+  [attr.rel]="site().status === 'live' ? 'noopener noreferrer' : null"
+  [class.is-coming-soon]="site().status === 'coming-soon'"
+>
   <div class="preview">
     @if (site().status === 'coming-soon') {
       <div class="placeholder">
         <span class="label">Coming soon</span>
       </div>
+    } @else if (site().screenshot && !screenshotFailed()) {
+      <img [src]="site().screenshot" [alt]="site().name + ' preview'" loading="lazy" (error)="onScreenshotError()" />
     } @else {
       <iframe
         [lazySrc]="site().url"
@@ -26,10 +35,5 @@
         <span class="tag">{{ tag }}</span>
       }
     </div>
-    @if (site().status === 'live') {
-      <a class="link" [href]="site().url" target="_blank" rel="noopener noreferrer">
-        Visit ↗
-      </a>
-    }
   </footer>
-</article>
+</a>
