@@ -31,4 +31,14 @@ export const SITES: Site[] = [
     status: 'live',
     screenshot: 'screenshots/echo.jpg',
   },
+  {
+    name: 'Microclimate',
+    slug: 'microclimate',
+    url: 'https://microclimate.kossmo.tech',
+    description: 'Click anywhere on the globe for a 7-day forecast. Compare cities, rank them by comfort.',
+    tags: ['weather', 'map', 'data', 'interactive'],
+    color: '#0EA5E9',
+    status: 'live',
+    screenshot: 'screenshots/microclimate.jpg',
+  },
 ];
