@@ -41,4 +41,14 @@ export const SITES: Site[] = [
     status: 'live',
     screenshot: 'screenshots/microclimate.jpg',
   },
+  {
+    name: 'Atomkit',
+    slug: 'atomkit',
+    url: 'https://atomkit.kossmo.tech',
+    description: 'Assemble atoms freely in 2D — compatible atoms bond automatically, and real molecules are identified via PubChem.',
+    tags: ['chemistry', 'physics', 'sandbox', 'generative'],
+    color: '#14B8A6',
+    status: 'live',
+    screenshot: 'screenshots/atomkit.jpg',
+  },
 ];
