@@ -4,7 +4,7 @@ export const SITES: Site[] = [
   {
     name: 'Neighbors',
     slug: 'neighbors',
-    url: 'https://neigbors.kossmo.tech',
+    url: 'https://neighbors.kossmo.tech',
     description: 'Discover the species living around you — flora, fauna, and fungi observed nearby, with photos and field notes.',
     tags: ['nature', 'biodiversity', 'geolocation', 'map'],
     color: '#22C55E',
