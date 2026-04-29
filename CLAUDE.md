@@ -39,6 +39,9 @@ Les sites sont définis dans un fichier de config (pas d'API backend). Chaque si
 - color : couleur d'accent du site (pour la carte)
 - status : "live" | "coming-soon"
 
+## Ajout d'un site
+Toujours insérer le nouveau site **en première position** du tableau `SITES` dans `src/app/core/data/sites.data.ts`. Le dernier ajouté doit apparaître en premier sur le dashboard.
+
 ## Règles spécifiques
 - Les iframes doivent être lazy-loaded (IntersectionObserver) pour ne pas charger tous les sites en même temps
 - Prévoir un fallback si un site en iframe ne répond pas (screenshot statique ou placeholder)
