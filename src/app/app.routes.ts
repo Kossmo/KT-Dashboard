@@ -6,4 +6,5 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/home/home.component').then((m) => m.HomeComponent),
   },
+  { path: '**', redirectTo: '' },
 ];

@@ -2,6 +2,16 @@ import { Site } from '../models/site.model';
 
 export const SITES: Site[] = [
   {
+    name: 'Holofolio',
+    slug: 'holofolio',
+    url: 'https://holofolio.kossmo.tech',
+    description: 'Track your Pokémon collection — cards, sealed products, accessories — with live TCGPlayer & Cardmarket prices, spending history, and P&L.',
+    tags: ['pokemon', 'collection', 'finance', 'tracker'],
+    color: '#FBBF24',
+    status: 'live',
+    screenshot: 'screenshots/holofolio.jpg',
+  },
+  {
     name: 'Neighbors',
     slug: 'neighbors',
     url: 'https://neighbors.kossmo.tech',
